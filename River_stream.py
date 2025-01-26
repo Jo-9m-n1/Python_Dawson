@@ -22,7 +22,6 @@ for i in range(inital_stream):
 
 while(infinite_loop == 0):
     ans = int(input("Enter 77, 88 or 99:"))
-
     if ans != 77:
         nums_river = int(input("Enter the number of the river: ")) - 1
         index = nums_flow[nums_river]
