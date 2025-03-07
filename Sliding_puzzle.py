@@ -66,8 +66,7 @@ def nextMove(n):
         move = input("Enter WASD (or QUIT): ").upper()
         
         if move in valid_moves:
-            new_i, new_j = valid_moves[move]
-            puzzle[i][j], puzzle[new_i][new_j] = puzzle[new_i][new_j], puzzle[i][j]
+            makeMove(puzzle, move)
         elif move == 'quit'.upper():
             print("Game terminated by user.")
             break
@@ -77,7 +76,20 @@ def nextMove(n):
         x -= 1
         print(f'You have {x} moves left.')
 
-
+def makeMove(puzzle, move):
+    (i, j) = findEmptyTile(puzzle)
+    valid_moves = {}
+    if i > 0:
+        valid_moves['W'] = (i - 1, j)
+    if i < n - 1:
+        valid_moves['S'] = (i + 1, j)
+    if j > 0:
+        valid_moves['A'] = (i, j - 1)
+    if j < n - 1:
+        valid_moves['D'] = (i, j + 1)
+    new_i, new_j = valid_moves[move]
+    puzzle[i][j], puzzle[new_i][new_j] = puzzle[new_i][new_j], puzzle[i][j]
+    
 def checkWin(puzzle):
     n = len(puzzle)
     correct = 1
