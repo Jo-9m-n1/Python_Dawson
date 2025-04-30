@@ -1,0 +1,10 @@
+from heterotroph import Heterotroph
+
+class Omnivore(Heterotroph):
+    def eat(self):
+        super().eat()
+        print("I eat anything")
+
+    def __repr__(self) -> str:
+        result = "This organism is omnivore, it can feed on both plants and other animals"
+        return super().__repr() + result
