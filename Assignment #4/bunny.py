@@ -34,10 +34,7 @@ class Bunny(Mammal, Herbivore, Pet):
 if __name__ == '__main__':
     b = Bunny()
 
-    print()
     b.__repr__()
-
-    print()
     b.reproduce()
     b.eat()
     b.sleep
