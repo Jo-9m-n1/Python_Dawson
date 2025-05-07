@@ -2,10 +2,10 @@ from animal import Animal
 
 class Mammal(Animal):
     def reporduce(self) -> str:
-        result = "Mammals give birth to live young and raise them until they can be independent"
+        result = "Mammals give birth to live young, and raise them until they can be independent."
 
         return super().reproduce() + result
     
     def __repr__(self) -> str:
-        return super().__repr() + '\nClass: Mammal'
+        return super().__repr__() + '\nClass: Mammal'
         

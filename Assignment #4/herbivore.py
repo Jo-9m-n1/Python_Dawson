@@ -6,6 +6,6 @@ class Herbivore(Heterotroph):
         print("I eat plants")
 
     def __repr__(self) -> str:
-        result = "This organism is herbivore, it feeds on plant matter its physiology facilitates food search"
+        result = "This organism is herbivore. It feeds on plant matter its physiology facilitates food search."
 
         return super().__repr() + result

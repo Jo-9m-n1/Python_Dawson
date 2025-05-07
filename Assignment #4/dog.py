@@ -11,7 +11,7 @@ class Dog(Mammal, Omnivore, Pet):
         result = 'Species: Dog'
         result = Mammal.__repr__(self) + result
         result += '\n' + Pet.__repr__(self)
-        return result + '\n' + Omnivore.__repr__(self)
+        return Omnivore.__repr__(self)+ '\n' + result
     
     def reproduce(self) -> None:
         result = "Dogs can reproduce litter of puppies"
@@ -28,17 +28,21 @@ class Dog(Mammal, Omnivore, Pet):
         Omnivore.eat(self)
         print("I eat anything I can find")
 
+    def pet(self):
+        print("You can pet this animal!")
+
 if __name__ == '__main__':
     d = Dog()
 
     print()
+    d.__repr__()
     d.reproduce()
-
-    print()
-    d.move()
-
-    print()
+    d.eat()
     d.sleep
+    d.pet()
 
     print()
     d.eat()
+
+    print()
+    d.pet()

@@ -23,4 +23,4 @@ class Animal(object, metaclass = ABCMeta):
         return "Memeber of this kingdom reproduce by finding a mate of a same species"
     
     def __repr__(self):
-        return "kingdom:Animalia"
+        return "Kingdom: Animalia"

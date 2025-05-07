@@ -27,18 +27,18 @@ class Bunny(Mammal, Herbivore, Pet):
     def eat(self) -> None:
         Herbivore.eat(self)
         print("I mostly eat fresh grass.")
+    
+    def pet(self):
+        print("You can pet this animal!")
 
 if __name__ == '__main__':
     b = Bunny()
 
     print()
+    b.__repr__()
+
+    print()
     b.reproduce()
-
-    print()
-    b.move()
-
-    print()
-    b.sleep
-
-    print()
     b.eat()
+    b.sleep
+    b.pet()
